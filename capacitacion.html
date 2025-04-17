@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #047e4d; /* Color menu horizontal */
+            color: #000000; /* Color tirulo CECEM */
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el cuadro del TITULO */
+        .sidebar {
+            width: 1350px; /* Ancho cuadro horizontal */
+            background-color: #f1e3e3; /* Color cuadro horizontal */
+            padding: 70px; /* Ancho del cuadro de texto */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(70vh - 170px); /* Altura ajustada a la pantalla menos la barra */
+            position: relative;
+        }
+
+        /* Estilo específico para el TITULO */
+        .sidebar h2 {
+            text-align: center; /* Centra el título */
+            color: #047e4d; /* Cambia el color del texto */
+            font-family: 'Arial', sans-serif; /* Cambia el tipo de fuente */
+            font-size: 30px; /* Ajusta el tamaño de la letra */
+            font-weight: bold; /* Hace que el texto sea negrita */
+        }
+
+        nav .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 2.0rem;
+            font-weight: bold;
+        }
+
+        nav .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .menu-right a {
+            text-decoration: none;
+            color: #000000; /* Color titulos menu horizontal */
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        nav .menu-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para el botón Talleres con menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #047e4d; /* Color menu talleres */
+            color: #333;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d4d4d4; /* Color seleccion Taller */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+         /* Barra lateral */
+        .sidebar {
+            width: 1350px; /* Ancho cuadro horizontal */
+            background-color: #f1e3e3; /* Color cuadro horizontal */
+            padding: 40px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(70vh - 170px); /* Altura ajustada a la pantalla menos la barra */
+            position: relative;
+        }
+
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 1px; /* Reduce la separación y sube el cuadro */
+            background-color: #f4f4f4; /* Color fondo de pagina */
+        }   
+       
+        .imagen-cuadro {
+            width: 100%; /* Ajusta el ancho al del cuadro */
+            max-width: 300px; /* Tamaño máximo para que no sean demasiado grandes */
+            display: block; /* Evita espacios extra */
+            margin: 10px auto; /* Centra las imágenes dentro del cuadro */
+            border-radius: 10px; /* Bordes redondeados para mejor estética */
+        }
+
+        .contenedor-imagenes {
+            display: flex;
+            justify-content: center; /* Centra las imágenes */
+            gap: 20px; /* Espacio entre imágenes */
+        }
+
+        .contenedor-imagenes img {
+            width: 30%; /* Ajusta el tamaño según necesites */
+            height: auto;
+            border-radius: 10px; /* Opcional, para esquinas redondeadas */
+        }
+
+        .imagen-con-texto {
+            text-align: center;
+            width: 30%;
+        }
+
+        .imagen-con-texto img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .imagen-con-texto p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #000; /* Color del texto */
+        }    
+       
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="left">
+            <div class="logo">CECEM</div>
+        </div>
+        <div class="right menu-right">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#">Talleres</a>
+                <div class="dropdown-content">
+                    <a href="cultura.html">Cultura</a>    
+                    <a href="deportes.html">Deportes</a>
+                    <a href="promocion.html">Promoción de la salud</a>
+                </div>
+            </div>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+</body>
+</html>
+
+  <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2>CAPACITACION</h2>
+            <div class="contenedor-imagenes">    
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/ingles.png" alt="Pintura" class="imagen-cuadro">
+                <p>Ingles</p>
+            </div>
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/estilismo.png" alt="Danza" class="imagen-cuadro">
+                <p>Estilismo</p>
+            </div>
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/lengua.png" alt="Canto" class="imagen-cuadro">
+                <p>Lengua de Señas Mexicana</p>
+            </div>
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/reposteria.png" alt="Canto" class="imagen-cuadro">
+                <p>Reposteria</p>
+            </div>
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/cocina.png" alt="Canto" class="imagen-cuadro">
+                <p>Cocina</p>
+            </div>
+            <div class="imagen-con-texto">
+                <img src="http://localhost/paginacecem/static/img/apoyo.png" alt="Canto" class="imagen-cuadro">
+                <p>Apoyo Escolar</p>
+            </div>
+        </div>    
+    </aside>
+</div>
+
+          
+            

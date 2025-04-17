@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #047e4d; /* Color menu horizontal */
+            color: #000000; /* Color tirulo CECEM */
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .menu-right a {
+            text-decoration: none;
+            color: #000000; /* Color titulos menu horizontal */
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        nav .menu-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para el botón Talleres con menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #047e4d; /* Color menu talleres */
+            color: #333;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d4d4d4; /* Color seleccion Taller */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+         /* Cuadro central */
+        .sidebar {
+            width: 1150px; /* Ancho cuadro central */
+            background-color: #f1e3e3; /* Color cuadro central */
+            padding: 40px; /* Ajuste del tamaño del cuadro */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(50vh - -100px); /* Altura ajustada a la pantalla menos la barra */
+            position: relative;
+        }
+
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajuste distancia con barra de menu */
+            margin-top: 70px; /* Deja espacio para la barra fija */
+            background-color: #f4f4f4; /* Color fondo de pagina */
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .maps-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: left; /* Centrado vertical */
+            align-items: flex-end;   /* Sigue alineado a la derecha */
+            height: 30%;
+            margin-top: 20px;
+            text-align: right;
+            margin-right: 200px; /* <-- Esto empuja el contenido hacia la izquierda */
+        }
+
+        .imagen-izquierda {
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+            width: 700px;  /* Puedes ajustar el tamaño según necesites */
+            height: auto;
+            margin-top: -250px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="left">
+            <div class="logo">CECEM</div>
+        </div>
+        <div class="right menu-right">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#">Talleres</a>
+                <div class="dropdown-content">
+                    <a href="cultura.html">Cultura</a>
+                    <a href="deportes.html">Deportes</a>
+                    <a href="capacitacion.html">Capacitacion y Adiestramiento Tecnico</a>
+                    <a href="promocion.html">Promoción de la salud</a>
+                </div>
+    </nav>
+</body>
+</html>
+
+  <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2>CONTACTO</h2>
+            <h2></h2>
+            <p></p>
+            <div class="maps-link">
+                <p>Ubicación del centro: </p>
+                <p>Antiguo Camino a Rayas 20.</p>
+                <p>Modelo, 36015 Guanajuato, Gto.</p>
+                <p>Telefono: 473 73 2 83 09</p>
+                <p>Redes Sociales:</p>
+                <a href="https://www.facebook.com/profile.php?id=61572308454304" target="_blank">
+                <img src="http://localhost/paginacecem/static/img/face.png" alt="red social" style="width:20px; border-radius:10px;">
+
+                <a href="https://www.google.com/maps/place/Antiguo+Camino+a+Rayas+20,+Modelo,+36015+Guanajuato,+Gto./@21.0227899,-101.2496397,20.25z/data=!4m6!3m5!1s0x842b73f680234945:0x52346c536812ef3!8m2!3d21.0228299!4d-101.2494457!16s%2Fg%2F11qnbp806s?entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en Google Maps</a>   
+                <img src="http://localhost/paginacecem/static/img/ubicacion.png" alt="Descripción de la imagen" class="imagen-izquierda">   
+
+                
+                </a>
+            </div>
+        </aside>

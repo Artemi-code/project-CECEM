@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #047e4d; /* Color menu horizontal */
+            color: #000000; /* Color tirulo CECEM */
+            padding: 21px 50px; /*altura y ajuste */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Arial', sans-serif; /*Fuente de letra*/
+            font-size: 2.0rem;
+            font-weight: bold;
+
+        }
+
+        nav .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .menu-right a {
+            text-decoration: none;
+            color: #000000; /* Color titulos menu horizontal */
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        nav .menu-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para el botón Talleres con menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #047e4d; /* Color menu talleres */
+            color: #333;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d4d4d4; /* Color seleccion Taller */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+         /* Barra lateral */
+        .sidebar {
+            width: 1550px; /* Ancho cuadro horizontal */
+            background-color: #f1e3e3; /* Color cuadro horizontal */
+            padding: 40px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 150px); /* Altura ajustada a la pantalla menos la barra */
+            position: relative;
+        }
+
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 70px; /* Deja espacio para la barra fija */
+            background-color: #ffffff; /* Color fondo de pagina */
+
+        .carrusel {
+        width: 100%;
+        max-width: 700px;
+        margin: 20px 0 20px auto;
+        position: relative;
+        overflow: hidden;
+        }
+
+        .carrusel img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        }
+
+        .contenido-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        }
+
+        .texto-lado-izquierdo {
+        flex: 1;
+        max-width: 50%;
+        }
+
+        .carrusel {
+        flex: 1;
+        max-width: 600px;
+        position: relative;
+        overflow: hidden;
+        }
+
+        .carrusel img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        }
+
+        .carrusel img.active {
+        position: relative;
+        opacity: 1;
+        }  
+       
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="left">
+            <div class="logo">CECEM</div>
+        </div>
+        <div class="right menu-right">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#">Talleres</a>
+                <div class="dropdown-content">
+                    <a href="cultura.html">Cultura</a>
+                    <a href="deportes.html">Deportes</a>
+                    <a href="capacitacion.html">Capacitacion y Adiestramiento Tecnico</a>
+                    <a href="promocion.html">Promoción de la salud</a>
+                </div>
+            </div>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+
+  <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+  <div class="contenido-flex">
+    <div class="texto-lado-izquierdo">
+      <h2>Somos una organización comprometida con el desarrollo personal, educativo y social de la comunidad, a través de la oferta de diversos talleres y actividades formativas.</h2>
+      <h2>Dentro de las áreas de trabajo destacan los talleres culturales, deportivos, de capacitación técnica y de promoción de la salud, cada uno diseñado para atender las necesidades actuales de la población.</h2>
+      <h2>A través de estas actividades, no solo se busca fomentar el aprendizaje práctico, sino también impulsar la integración social, el bienestar físico y emocional, así como la preparación laboral de sus participantes.</h2>
+    </div>
+<div class="carrusel">
+    <img src="http://localhost/paginacecem/static/img/cecem.jpg" class="slide active">
+    <img src="http://localhost/paginacecem/static/img/cc1.jpg" class="slide">
+    <img src="http://localhost/paginacecem/static/img/cc2.jpg" class="slide">
+    <img src="http://localhost/paginacecem/static/img/cc4.jpg" class="slide">
+    <img src="http://localhost/paginacecem/static/img/cc5.jpg" class="slide">
+</div>
+</div>
+</aside>
+
+
+<!-- SCRIPT AQUÍ -->
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function mostrarSiguienteImagen() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+  }
+
+  setInterval(mostrarSiguienteImagen, 3000);
+</script>
+
+</body>
+</html>
+        
+            
